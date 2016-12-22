@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ensure we are running on Raspbian
-lsb_release -a 2>/dev/null | grep Raspbian
+cat /etc/os-release 2>/dev/null | grep Raspbian
 if [ "$?" -ne "0" ]; then
     echo "This OS is not Raspbian. Exiting..."
     exit 1
